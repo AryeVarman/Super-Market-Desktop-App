@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane fx:id="mainScrollPane" fitToHeight="true" fitToWidth="true" prefHeight="863.0" styleClass="backGround" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="updateStoreItems.addNewSale.AddNewSaleController">
+   <content>
+      <BorderPane fx:id="borderPane" prefHeight="863.0" prefWidth="1228.0" styleClass="backGround">
+         <top>
+            <HBox alignment="CENTER" minHeight="100.0" prefHeight="107.0" prefWidth="1228.0" styleClass="backGround" BorderPane.alignment="CENTER">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add New Sale">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="title" />
+                        <String fx:value="txt" />
+                     </styleClass>
+                  </Text>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <ScrollPane fitToHeight="true" fitToWidth="true" styleClass="backGround" BorderPane.alignment="CENTER">
+               <content>
+                  <VBox prefHeight="337.0" prefWidth="639.0" styleClass="backGround">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" minHeight="38.0" minWidth="600.0" prefHeight="65.0" prefWidth="1226.0" scaleShape="false" spacing="10.0" styleClass="backGround" VBox.vgrow="NEVER">
+                           <children>
+                              <Label minWidth="75.0" prefHeight="29.0" prefWidth="75.0" styleClass="txt" text="Sale Name:" />
+                              <TextField fx:id="saleNameTextField" minWidth="187.0" prefHeight="24.0" prefWidth="187.0" styleClass="chooser" />
+                              <Label prefHeight="21.0" prefWidth="49.0" text="           " />
+                              <Label minWidth="67.0" prefHeight="21.0" prefWidth="67.0" styleClass="txt" text="Sale Type:" />
+                              <ComboBox fx:id="saleTypeComboBox" minWidth="119.0" prefHeight="31.0" prefWidth="119.0" styleClass="chooser" />
+                              <Label prefHeight="21.0" prefWidth="524.0" text="                 " />
+                              <Button fx:id="saleNameAndTypeConfirmBtn" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onClickSaleNameAndTypeConfirmBtn" prefHeight="30.0" prefWidth="120.0" text="confirm">
+                                 <styleClass>
+                                    <String fx:value="btn" />
+                                    <String fx:value="continueBtn" />
+                                 </styleClass>
+                              </Button>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="10.0" top="10.0" />
+                           </padding>
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </HBox>
+                        <HBox minHeight="20.0" prefHeight="20.0" prefWidth="1226.0" styleClass="backGround">
+                           <children>
+                              <Label prefHeight="21.0" prefWidth="109.0" />
+                              <Label fx:id="errorSaleNameLabel" text="sale name already exist" textFill="RED" visible="false" />
+                           </children>
+                        </HBox>
+                        <Separator prefWidth="600.0" />
+                        <HBox alignment="CENTER_LEFT" minHeight="60.0" minWidth="600.0" prefHeight="60.0" prefWidth="600.0" spacing="10.0" styleClass="backGround">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <children>
+                              <Label minWidth="121.0" prefHeight="30.0" prefWidth="121.0" text="Sale Trigger:">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="txt" />
+                                    <String fx:value="subTitle" />
+                                 </styleClass>
+                              </Label>
+                              <Label minWidth="476.0" prefHeight="21.0" prefWidth="476.0" styleClass="txt" text=" (the action that the customer will have to do in order to allow this sale)" />
+                              <Label prefHeight="21.0" prefWidth="254.0" text="                 " />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" minHeight="38.0" minWidth="600.0" prefHeight="38.0" prefWidth="1109.0" spacing="10.0" styleClass="backGround">
+                           <children>
+                              <Label minWidth="39.0" prefHeight="21.0" prefWidth="39.0" styleClass="txt" text=" item:" />
+                              <ComboBox fx:id="saleTriggerItemComboBox" minWidth="174.0" prefHeight="31.0" prefWidth="174.0" styleClass="chooser" />
+                              <Label prefHeight="21.0" prefWidth="94.0" text="                 " />
+                              <Label layoutX="20.0" layoutY="29.0" minWidth="59.0" prefHeight="21.0" prefWidth="59.0" styleClass="txt" text="amount:" />
+                              <TextField fx:id="saleTriggerAmountTextField" minWidth="94.0" prefHeight="31.0" prefWidth="94.0" styleClass="chooser" />
+                              <Label prefHeight="21.0" prefWidth="570.0" text="                 " />
+                              <Button fx:id="saleTriggerConfirmBtn" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onClickSaleTriggerConfirm" prefHeight="30.0" prefWidth="120.0" text="confirm">
+                                 <styleClass>
+                                    <String fx:value="btn" />
+                                    <String fx:value="continueBtn" />
+                                 </styleClass>
+                              </Button>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </HBox>
+                        <HBox minHeight="22.0" prefHeight="22.0" prefWidth="1109.0" styleClass="backGround">
+                           <children>
+                              <Label prefHeight="21.0" prefWidth="407.0" />
+                              <Label fx:id="errorSaleTriggerAmountLabel" prefHeight="21.0" prefWidth="387.0" text="amount for this item must be an integer number" textFill="RED" visible="false" />
+                           </children>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" minHeight="60.0" minWidth="600.0" prefHeight="60.0" prefWidth="600.0" spacing="10.0" styleClass="backGround">
+                           <children>
+                              <Label minWidth="100.0" prefHeight="30.0" prefWidth="100.0" text="Sale Offer:">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="txt" />
+                                    <String fx:value="subTitle" />
+                                 </styleClass>
+                              </Label>
+                              <Label minWidth="492.0" prefHeight="21.0" prefWidth="492.0" styleClass="txt" text=" (the offer that been given too the customer in order to complete the sale)" />
+                              <Label prefHeight="21.0" prefWidth="49.0" text="           " />
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="133.0" minHeight="34.0" minWidth="600.0" prefHeight="34.0" prefWidth="1109.0" spacing="10.0" styleClass="backGround">
+                           <children>
+                              <Label minWidth="39.0" prefWidth="39.0" styleClass="txt" text=" item:" />
+                              <ComboBox fx:id="saleOfferItemComboBox" minWidth="174.0" prefHeight="31.0" prefWidth="174.0" styleClass="chooser" />
+                              <Label prefHeight="21.0" prefWidth="94.0" text="                 " />
+                              <Label layoutX="20.0" layoutY="29.0" minWidth="59.0" prefWidth="59.0" styleClass="txt" text="amount:" />
+                              <TextField fx:id="saleOfferAmountTextField" minWidth="94.0" prefHeight="31.0" prefWidth="94.0" styleClass="chooser" />
+                              <Label layoutX="251.0" layoutY="29.0" prefHeight="21.0" prefWidth="77.0" text="                 " />
+                              <Label minWidth="94.0" prefWidth="94.0" styleClass="txt" text="price per unit:" />
+                              <TextField fx:id="saleOfferPriceTextField" layoutX="420.0" layoutY="24.0" minWidth="94.0" prefHeight="31.0" prefWidth="94.0" styleClass="chooser" />
+                              <Label layoutX="524.0" layoutY="27.0" prefHeight="21.0" prefWidth="276.0" text="                 " />
+                              <Button fx:id="addOfferBtn" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onClickAddNewOfferBtn" prefHeight="30.0" prefWidth="120.0" text="Add Offer">
+                                 <styleClass>
+                                    <String fx:value="btn" />
+                                    <String fx:value="continueBtn" />
+                                 </styleClass>
+                              </Button>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </HBox>
+                        <HBox minHeight="17.0" minWidth="934.0" prefHeight="36.0" prefWidth="1109.0" styleClass="backGround">
+                           <children>
+                              <Label prefHeight="21.0" prefWidth="409.0" />
+                              <Label fx:id="errorSaleOfferAmountLabel" prefHeight="27.0" prefWidth="416.0" text="amount for this item must be an integer number" textFill="RED" visible="false" />
+                           </children>
+                        </HBox>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" styleClass="backGround">
+                           <content>
+                              <TitledPane collapsible="false" prefHeight="366.0" prefWidth="1107.0" text="Sale Summery">
+                                 <content>
+                                    <VBox prefHeight="244.0" prefWidth="1105.0" styleClass="backGround">
+                                       <children>
+                                          <HBox minWidth="908.0" prefHeight="47.0" prefWidth="908.0" spacing="10.0" styleClass="backGround">
+                                             <children>
+                                                <Label styleClass="txt" text="Sale Name:" />
+                                                <Text fx:id="summerySaleNameText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt" visible="false" wrappingWidth="693.0" />
+                                             </children>
+                                             <padding>
+                                                <Insets left="10.0" top="10.0" />
+                                             </padding>
+                                          </HBox>
+                                          <HBox layoutX="22.0" layoutY="22.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="908.0" spacing="10.0" styleClass="backGround">
+                                             <children>
+                                                <Label minWidth="130.0" prefWidth="130.0" text="Sale Trigger - ">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                   <styleClass>
+                                                      <String fx:value="txt" />
+                                                      <String fx:value="subTitle" />
+                                                   </styleClass>
+                                                </Label>
+                                                <Label layoutX="20.0" layoutY="20.0" styleClass="txt" text="Buy item:" />
+                                                <Text fx:id="summeryTriggerItemText" layoutX="105.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt" visible="false" wrappingWidth="129.0" />
+                                                <Label layoutX="193.0" layoutY="20.0" styleClass="txt" text="In the amount of:" />
+                                                <Text fx:id="summeryTriggerAmountText" layoutX="130.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt" visible="false" wrappingWidth="53.0" />
+                                             </children>
+                                             <padding>
+                                                <Insets left="10.0" top="10.0" />
+                                             </padding>
+                                          </HBox>
+                                          <HBox prefHeight="35.0" prefWidth="908.0" spacing="10.0" styleClass="backGround">
+                                             <children>
+                                                <Label minWidth="130.0" prefHeight="25.0" prefWidth="130.0" text="Sale Type -  ">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                   <styleClass>
+                                                      <String fx:value="txt" />
+                                                      <String fx:value="subTitle" />
+                                                   </styleClass>
+                                                </Label>
+                                                <Text fx:id="summerySaleTypeText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt" visible="false" wrappingWidth="103.0" />
+                                             </children>
+                                             <opaqueInsets>
+                                                <Insets left="10.0" top="10.0" />
+                                             </opaqueInsets>
+                                             <padding>
+                                                <Insets left="10.0" top="10.0" />
+                                             </padding>
+                                          </HBox>
+                                          <HBox layoutX="22.0" layoutY="116.0" prefHeight="88.0" prefWidth="908.0" spacing="10.0" styleClass="backGround">
+                                             <children>
+                                                <Label minWidth="130.0" prefHeight="20.0" prefWidth="130.0" text="Sale Offers -  ">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                   <styleClass>
+                                                      <String fx:value="txt" />
+                                                      <String fx:value="subTitle" />
+                                                   </styleClass>
+                                                </Label>
+                                                <Text fx:id="summerySaleOffersText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt" wrappingWidth="930.0" />
+                                             </children>
+                                             <opaqueInsets>
+                                                <Insets left="10.0" top="10.0" />
+                                             </opaqueInsets>
+                                             <padding>
+                                                <Insets left="10.0" top="10.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                                 <styleClass>
+                                    <String fx:value="txt" />
+                                    <String fx:value="continueBtn" />
+                                    <String fx:value="backGround" />
+                                 </styleClass>
+                              </TitledPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </center>
+         <bottom>
+            <HBox alignment="CENTER" prefHeight="63.0" prefWidth="1053.0" spacing="100.0" styleClass="backGround" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="addSaleBtn" mnemonicParsing="false" onAction="#onClickAddSaleBtn" prefHeight="60.0" prefWidth="170.0" styleClass="btn" text="Add Sale">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="cancelBtn" layoutX="423.0" layoutY="10.0" mnemonicParsing="false" onAction="#onClickCancelBtn" prefHeight="60.0" prefWidth="170.0" styleClass="btn" text="Cancel">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </bottom>
+         <padding>
+            <Insets bottom="10.0" />
+         </padding>
+      </BorderPane>
+   </content>
+</ScrollPane>

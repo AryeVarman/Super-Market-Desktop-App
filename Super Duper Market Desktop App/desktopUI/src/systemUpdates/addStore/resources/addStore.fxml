@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" styleClass="backGround" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="systemUpdates.addStore.AddStoreController">
+   <content>
+      <BorderPane fx:id="borderPane" styleClass="backGround">
+         <top>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add New Store" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets top="5.0" />
+               </BorderPane.margin>
+               <styleClass>
+                  <String fx:value="txt" />
+                  <String fx:value="title" />
+               </styleClass>
+            </Text>
+         </top>
+         <center>
+            <GridPane fx:id="gridPane" styleClass="backGround" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="NEVER" maxWidth="160.0" minWidth="10.0" prefWidth="136.0" />
+                <ColumnConstraints hgrow="NEVER" maxWidth="400.0" minWidth="10.0" prefWidth="153.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="5.0" minWidth="5.0" prefWidth="5.0" />
+                  <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="150.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="5.0" minWidth="5.0" prefWidth="5.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="25.0" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="15.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="25.0" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="15.0" minHeight="15.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="15.0" minHeight="15.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="15.0" minHeight="15.0" prefHeight="15.0" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="10.0" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="25.0" minHeight="25.0" prefHeight="25.0" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="30.0" minHeight="15.0" prefHeight="15.0" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" vgrow="ALWAYS" />
+                  <RowConstraints minHeight="35.0" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="15.0" minHeight="15.0" prefHeight="15.0" vgrow="ALWAYS" />
+              </rowConstraints>
+               <children>
+                  <Label styleClass="txt" text="Enter serial number:" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="serialNumberTextField" styleClass="chooser" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label styleClass="txt" text="Enter store name:" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="storeNameTextField" styleClass="chooser" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Label styleClass="txt" text="Store Location:" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" styleClass="backGround" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <children>
+                        <Label styleClass="txt" text="X: " />
+                        <ChoiceBox fx:id="locationXChooser" maxHeight="25.0" maxWidth="40.0" minHeight="25.0" minWidth="40.0" prefHeight="25.0" prefWidth="40.0" styleClass="chooser" HBox.hgrow="NEVER">
+                           <HBox.margin>
+                              <Insets right="30.0" />
+                           </HBox.margin>
+                        </ChoiceBox>
+                        <Label styleClass="txt" text="Y:" />
+                        <ChoiceBox fx:id="locationYChooser" maxHeight="25.0" maxWidth="40.0" minHeight="25.0" minWidth="40.0" prefHeight="25.0" prefWidth="40.0" styleClass="chooser" />
+                     </children>
+                  </HBox>
+                  <Label styleClass="txt" text="Store PPK:" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <TextField fx:id="PPKTextField" styleClass="chooser" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                  <Label styleClass="txt" text="Choose item to add:" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                  <ChoiceBox fx:id="itemChooser" prefHeight="25.0" prefWidth="224.0" styleClass="chooser" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                  <Label styleClass="txt" text="Item price:" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                  <TextField fx:id="itemPriceTextField" styleClass="chooser" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+                  <Button fx:id="addStoreItem" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#clickedAddStore" prefHeight="30.0" prefWidth="120.0" text="Add Store" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="14" GridPane.valignment="BOTTOM">
+                     <styleClass>
+                        <String fx:value="continueBtn" />
+                        <String fx:value="btn" />
+                     </styleClass></Button>
+                  <Button fx:id="addItemBtn" alignment="CENTER" mnemonicParsing="false" onAction="#clickedAddItem" prefHeight="30.0" prefWidth="100.0" text="Add Item" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="13">
+                     <styleClass>
+                        <String fx:value="continueBtn" />
+                        <String fx:value="btn" />
+                     </styleClass></Button>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" styleClass="backGround" GridPane.columnIndex="4" GridPane.rowIndex="1" GridPane.rowSpan="15">
+                     <content>
+                        <Text fx:id="itemSummeryTxt" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt" text="Items In Store:" />
+                     </content>
+                  </ScrollPane>
+                  <Text fx:id="serialNumbetErorTxt" fill="#e40505" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt" text="serial # txt" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Text fx:id="locationErrorTxt" fill="#e30b0b" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt" text="Location is taken" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                  <Text fx:id="PPKErrorTxt" fill="#e30b0b" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt" text="PPK can't be negative" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                  <Text fx:id="priceErrorTxt" fill="#e30b0b" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt" text="Price can't be negative" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="12" />
+                  <Button mnemonicParsing="false" onAction="#clickedCancel" prefHeight="30.0" prefWidth="120.0" styleClass="btn" text="Cancel" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="BOTTOM" />
+                  <Text fx:id="nameErrorTxt" fill="#e30b0b" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt" text="pick a name" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+               </children>
+            </GridPane>
+         </center>
+      </BorderPane>
+   </content>
+</ScrollPane>

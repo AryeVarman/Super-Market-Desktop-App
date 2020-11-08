@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane fx:id="mainScrollPane" fitToHeight="true" fitToWidth="true" styleClass="backGround" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="updateStoreItems.deleteItem.DeleteItemController">
+   <content>
+      <VBox fx:id="mainVBox" alignment="TOP_CENTER" spacing="10.0" styleClass="backGround">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Delete Item" wrappingWidth="191.54296875">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="txt" />
+                  <String fx:value="title" />
+               </styleClass>
+            </Text>
+            <HBox prefHeight="70.0" prefWidth="600.0" styleClass="backGround" />
+            <HBox alignment="CENTER" prefHeight="173.0" prefWidth="600.0" spacing="10.0" styleClass="backGround">
+               <children>
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="52.0" prefWidth="120.0" text="Choose Item:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="subTitle" />
+                        <String fx:value="txt" />
+                     </styleClass>
+                  </Label>
+                  <ComboBox fx:id="itemsComboBox" prefWidth="150.0" styleClass="chooser" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="156.0" prefHeight="57.0" prefWidth="600.0" spacing="10.0" styleClass="backGround" />
+            <HBox prefHeight="40.0" prefWidth="600.0" styleClass="backGround" />
+            <HBox alignment="CENTER" prefHeight="144.0" prefWidth="600.0" spacing="100.0" styleClass="backGround">
+               <children>
+                  <Button fx:id="deleteBtn" alignment="CENTER" mnemonicParsing="false" onAction="#onClickDeleteBtn" prefHeight="30.0" prefWidth="120.0" text="Delete Item">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="continueBtn" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="cancelBtn" alignment="CENTER" mnemonicParsing="false" onAction="#onClickCancelBtn" prefHeight="30.0" prefWidth="120.0" styleClass="btn" text="Cancel" />
+               </children>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </VBox>
+   </content>
+</ScrollPane>

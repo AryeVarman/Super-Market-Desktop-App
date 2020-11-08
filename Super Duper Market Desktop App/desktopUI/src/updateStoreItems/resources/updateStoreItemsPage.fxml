@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" styleClass="backGround" vbarPolicy="NEVER" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="updateStoreItems.UpdateStoreItemsController">
+   <content>
+      <GridPane fx:id="gridPane" alignment="CENTER" prefHeight="642.0" prefWidth="838.0" styleClass="backGround">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="899.0" minWidth="0.0" prefWidth="899.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="42.0" minWidth="0.0" prefWidth="0.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="166.0" minHeight="10.0" prefHeight="97.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="244.0" minHeight="10.0" prefHeight="151.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="184.0" minHeight="10.0" prefHeight="167.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox alignment="CENTER" prefHeight="244.0" prefWidth="654.0" spacing="5.0" styleClass="backGround" GridPane.rowIndex="1">
+               <children>
+                  <Label text="Choose Store:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="txt" />
+                        <String fx:value="subTitle" />
+                     </styleClass>
+                  </Label>
+                  <ComboBox fx:id="storesComboBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="180.0" styleClass="chooser" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" styleClass="backGround" GridPane.rowIndex="2">
+               <children>
+                  <Button fx:id="addNewItemChooserBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onClickAddNewItemChooserBtn" prefHeight="80.0" prefWidth="170.0" text="Add New Item">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="continueBtn" />
+                     </styleClass></Button>
+                  <Button fx:id="changeItemPriceChooserBtn" layoutX="346.0" layoutY="71.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onClickChangeItemPriceChooserBtn" prefHeight="80.0" prefWidth="160.0" text="Change Item Price">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="continueBtn" />
+                     </styleClass></Button>
+                  <Button fx:id="deleteItemChooserBtn" layoutX="246.0" layoutY="71.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onClickDeleteItemChooserBtn" prefHeight="80.0" prefWidth="170.0" text="Delete Item">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="continueBtn" />
+                     </styleClass></Button>
+                  <Button fx:id="addNewSaleChooserBtn" layoutX="233.0" layoutY="54.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onClickAddNewSaleChooserBtn" prefHeight="80.0" prefWidth="170.0" text="Add New Sale">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="continueBtn" />
+                     </styleClass></Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="270.0" prefHeight="100.0" prefWidth="200.0" spacing="50.0" styleClass="backGround">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Update Store Items">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="txt" />
+                        <String fx:value="title" />
+                     </styleClass>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="backGround" GridPane.rowIndex="3">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#clickedCancel" prefHeight="50.0" prefWidth="100.0" styleClass="btn" text="Cancel">
+                     <HBox.margin>
+                        <Insets bottom="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+   </content>
+</ScrollPane>

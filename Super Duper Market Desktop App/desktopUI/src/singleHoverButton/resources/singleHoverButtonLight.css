@@ -1,0 +1,68 @@
+.backGround {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+#mainPageTitleText {
+    -fx-font-style: italic;
+    -fx-font-weight: bold;
+    -fx-underline: true;
+    -fx-font-size: 30;
+}
+
+.btn {
+    -fx-background-color: linear-gradient(#ff5400, #be1d00);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+    -fx-font-style: italic;
+    -fx-font-family: "cursive";
+    -fx-font-weight: bold;
+}
+
+.continueBtn {
+    -fx-font-weight: bold;
+}
+
+.txt {
+    -fx-font-style: italic;
+    -fx-font-family: "cursive";
+    -fx-fill: red;
+    -fx-text-fill: red;
+    -fx-font-size: 14px;
+}
+
+.title {
+    -fx-font-size: 25;
+    -fx-font-weight: bold;
+    -fx-fill: red;
+    -fx-text-fill: red;
+}
+
+.mainTitle {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-fill: red;
+    -fx-text-fill: red;
+}
+
+.error {
+    -fx-font-style: italic;
+    -fx-font-family: "cursive";
+    -fx-fill: black;
+    -fx-text-fill: black;
+}
+
+.textField {
+    -fx-font-style: italic;
+    -fx-font-family: "cursive";
+    -fx-fill: black;
+    -fx-text-fill: black;
+}
