@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane id="smartOrderScrollPane" fx:id="smartOrderScrollPane" fitToHeight="true" fitToWidth="true" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="order.smartOrder.SmartOrderController">
+   <content>
+      <BorderPane fx:id="smartOrderBorderPane" styleClass="backGround">
+         <top>
+            <Text fx:id="smartOrderTitle" strokeType="OUTSIDE" strokeWidth="0.0" text="Smart Order" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="txt" />
+                  <String fx:value="title" />
+               </styleClass>
+            </Text>
+         </top>
+         <center>
+            <GridPane fx:id="smartOrderGridPane" styleClass="backGround" vgap="3.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="1.7976931348623157E308" minWidth="166.0" prefWidth="166.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="279.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="10.0" vgrow="NEVER" />
+                <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="80.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="15.0" minHeight="15.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="ALWAYS" />
+              </rowConstraints>
+               <children>
+                  <Label styleClass="txt" text="Choose Order Date:" GridPane.columnIndex="1" />
+                  <DatePicker fx:id="smartOrderDatePicker" maxHeight="20.0" minHeight="20.0" onAction="#clickedDatePicker" styleClass="textField" GridPane.columnIndex="2" />
+                  <Label styleClass="txt" text="Choose Item:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label styleClass="txt" text="Quantitiy / Weight" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="smartOrderQuantityOrWeightTxtArea" maxHeight="30.0" minHeight="25.0" styleClass="textField" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <ChoiceBox fx:id="smartOrderChooseItemChooser" maxHeight="30.0" minHeight="25.0" minWidth="166.0" styleClass="txt" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Button fx:id="smartOrderAddItemBtn" disable="true" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickedAddItemToOrder" prefHeight="30.0" prefWidth="160.0" styleClass="btn" text="Add Item To Cart" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                  <Button fx:id="smartOrderCancelOrderBtn" alignment="CENTER" mnemonicParsing="false" onAction="#clickedCancelOrder" prefHeight="30.0" prefWidth="120.0" styleClass="btn" text="Cancel Order" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="BOTTOM" />
+                  <Button fx:id="smartOrderDoneBtn" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#clickedDone" prefHeight="30.0" prefWidth="120.0" text="Done" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="9" GridPane.valignment="BOTTOM">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="continueBtn" />
+                     </styleClass></Button>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="464.0" prefWidth="349.0" GridPane.columnIndex="4" GridPane.columnSpan="2147483647" GridPane.rowSpan="2147483647">
+                     <content>
+                        <Text fx:id="smartOrderOrderSumerryTxt" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt" text="Order Summery " underline="false" />
+                     </content>
+                     <styleClass>
+                        <String fx:value="txt" />
+                        <String fx:value="backGround" />
+                     </styleClass>
+                  </ScrollPane>
+                  <Label fx:id="smartOrderIllegalQuantityLabel" styleClass="error" text="value is not valid for item type" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                  <Label fx:id="smartOrderDateErrorLable" layoutX="153.0" layoutY="40.0" styleClass="error" text="please choose legal date" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label id="storeInOrderLabel" styleClass="txt" text="Store In Order:" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <ScrollPane fitToHeight="true" fitToWidth="true" styleClass="backGround" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="8" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets top="3.0" />
+                     </GridPane.margin>
+                     <content>
+                        <Text id="storeListTxt" fx:id="storeListTxt" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt" />
+                     </content>
+                  </ScrollPane>
+                  <ImageView fx:id="bagIcon" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" visible="false" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                     <image>
+                        <Image url="@../../simpleOrder/resources/bagIcon.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="cartIcon" fitHeight="70.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="6">
+                     <image>
+                        <Image url="@../../simpleOrder/resources/cartIcon.jpg" />
+                     </image>
+                  </ImageView>
+                  <CheckBox fx:id="disableAnimation" mnemonicParsing="false" styleClass="txt" text="disable animation" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" />
+                     </GridPane.margin>
+                  </CheckBox>
+               </children>
+            </GridPane>
+         </center>
+      </BorderPane>
+   </content>
+   <styleClass>
+      <String fx:value="scrollPane" />
+      <String fx:value="backGround" />
+   </styleClass>
+</ScrollPane>

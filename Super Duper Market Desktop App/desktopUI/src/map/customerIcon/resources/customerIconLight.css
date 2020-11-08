@@ -1,0 +1,7 @@
+#iconLabel {
+    -fx-font-weight: bold;
+    -fx-background-size: 14;
+    -fx-text-fill: black;
+    -fx-font-family: "cursive";
+    -fx-font-style: italic;
+}

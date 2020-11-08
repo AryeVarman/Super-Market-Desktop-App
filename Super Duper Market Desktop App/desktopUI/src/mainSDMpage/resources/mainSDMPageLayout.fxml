@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane id="mainPageBackGround" fx:id="mainScrollPane" fitToHeight="true" fitToWidth="true" minHeight="150.0" minViewportHeight="150.0" minViewportWidth="200.0" minWidth="200.0" prefHeight="656.0" prefWidth="1298.0" styleClass="backGround" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainSDMpage.SDMController">
+   <content>
+      <BorderPane fx:id="mainBorderPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="backGround">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <left>
+            <VBox id="mainMenuVbox" fx:id="menuVBox" alignment="TOP_CENTER" prefWidth="170.0" spacing="6.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="90.0" styleClass="backGround" VBox.vgrow="NEVER">
+                     <children>
+                        <Button fx:id="lightStyleBtn" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickedRedStyle" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: White;" textFill="#ffffff00" HBox.hgrow="NEVER" />
+                        <Button fx:id="lightBlueStyleBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickedCyanStyle" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: cyan;" textFill="#ffffff00" />
+                        <Button fx:id="darkStyleBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickedBlackStyle" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: black;" textFill="#ffffff00" />
+                     </children>
+                  </HBox>
+                  <Button fx:id="loadXMLBtn" alignment="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#clickedLoadXMLBtn" prefHeight="40.0" prefWidth="160.0" text="Load XML File">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="continueBtn" />
+                     </styleClass></Button>
+                  <Button id="makeOrderBtn" fx:id="makeAnOrderBtn" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickedMakeAnOrderBtn" prefHeight="40.0" prefWidth="160.0" text="Make An Order">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="continueBtn" />
+                     </styleClass></Button>
+                  <Button id="updateStoreBtn" fx:id="updateStoreItemsBtn" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickedUpdateStoreItemsBtn" prefHeight="40.0" prefWidth="160.0" text="Update Store Items">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="continueBtn" />
+                     </styleClass></Button>
+                  <Button id="addNewStoreBtn" fx:id="addNewStoreBtn" alignment="CENTER" mnemonicParsing="false" onAction="#clickedAddNewStore" prefHeight="40.0" prefWidth="160.0" text="Add New Store">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="continueBtn" />
+                     </styleClass></Button>
+                  <Button id="addNewItemBtn" fx:id="addNewItemBtn" alignment="CENTER" mnemonicParsing="false" onAction="#clickedAddNewItem" prefHeight="40.0" prefWidth="160.0" text="Add New Item">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="continueBtn" />
+                     </styleClass></Button>
+                  <Button id="showAllStoresBtn" fx:id="showStoreBtn" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickedShowAllStoresBtn" prefHeight="40.0" prefWidth="160.0" text="Show All Stores">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="continueBtn" />
+                     </styleClass></Button>
+                  <Button id="showAllItemsBtn" fx:id="showItemsBtn" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickedShowAllItemsBtn" prefHeight="40.0" prefWidth="160.0" text="Show All Items">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="continueBtn" />
+                     </styleClass></Button>
+                  <Button id="showAllCustomersBtn" fx:id="showCustomersBtn" alignment="CENTER" layoutX="13.0" layoutY="170.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickedShowCustomersDetailsBtn" prefHeight="40.0" prefWidth="160.0" text="Show All Customers">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="continueBtn" />
+                     </styleClass></Button>
+                  <Button id="showOrderHistoryBtn" fx:id="showOrderHistoryBtn" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickedShowOrderHistoryBtn" prefHeight="40.0" prefWidth="160.0" text="Show Order History">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="continueBtn" />
+                     </styleClass></Button>
+                  <Button id="showOrderHistoryBtn" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickedExitBtn" prefHeight="40.0" prefWidth="160.0" text="Exit">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="continueBtn" />
+                     </styleClass>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="3.0" right="3.0" top="10.0" />
+               </padding>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <styleClass>
+                  <String fx:value="vbox" />
+                  <String fx:value="backGround" />
+               </styleClass>
+            </VBox>
+         </left>
+         <top>
+            <HBox alignment="CENTER" minHeight="50.0" prefHeight="50.0" styleClass="backGround" BorderPane.alignment="CENTER">
+               <children>
+                  <Text id="mainPageTitleText" fx:id="title" disable="true" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="mainTitle" text="Super Duper Market">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+         </top>
+      </BorderPane>
+   </content>
+</ScrollPane>

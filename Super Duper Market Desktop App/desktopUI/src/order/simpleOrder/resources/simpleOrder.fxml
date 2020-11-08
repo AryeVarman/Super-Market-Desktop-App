@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane id="simpleOrderScrollPane" fx:id="simpleOrderScrollPane" fitToHeight="true" fitToWidth="true" prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="order.simpleOrder.SimpleOrderController">
+   <content>
+      <BorderPane fx:id="simpleOrderBorderPane" styleClass="backGround">
+         <top>
+            <Text fx:id="simpleOrderTitle" strokeType="OUTSIDE" strokeWidth="0.0" text="Simple Order" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="txt" />
+                  <String fx:value="title" />
+               </styleClass>
+            </Text>
+         </top>
+         <center>
+            <GridPane fx:id="simpleOrderGridPane" styleClass="backGround" vgap="3.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="133.0" minWidth="133.0" prefWidth="133.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="1.7976931348623157E308" minWidth="167.0" prefWidth="167.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="279.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="NEVER" />
+                <RowConstraints maxHeight="100.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="100.0" minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="100.0" minHeight="10.0" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="15.0" minHeight="15.0" prefHeight="15.0" vgrow="ALWAYS" />
+              </rowConstraints>
+               <children>
+                  <ChoiceBox fx:id="simpleOrderChooseStoreChooser" maxHeight="30.0" minHeight="25.0" minWidth="166.0" styleClass="txt" GridPane.columnIndex="2" />
+                  <Label contentDisplay="CENTER" minWidth="98.0" prefHeight="25.0" prefWidth="120.0" styleClass="txt" text="Choose Store: " GridPane.columnIndex="1" GridPane.hgrow="NEVER" />
+                  <Label styleClass="txt" text="Choose Order Date:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <DatePicker fx:id="simpleOrderDatePicker" maxHeight="20.0" minHeight="20.0" onAction="#clickedDatePicker" styleClass="textField" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Label styleClass="txt" text="Choose Item:" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label styleClass="txt" text="Quantitiy / Weight" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <TextField fx:id="simpleOrderQuantityOrWeightTxtArea" maxHeight="30.0" minHeight="25.0" styleClass="textField" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                  <ChoiceBox fx:id="simpleOrderChooseItemChooser" maxHeight="30.0" minHeight="25.0" minWidth="166.0" styleClass="txt" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <Button fx:id="simpleOrderAddItemBtn" alignment="CENTER" disable="true" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickedAddItemToOrder" prefHeight="30.0" prefWidth="160.0" styleClass="btn" text="Add Item To Cart" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                  <Button fx:id="simpleOrderCancelOrderBtn" alignment="CENTER" mnemonicParsing="false" onAction="#clickedCancelOrder" prefHeight="30.0" prefWidth="120.0" styleClass="btn" text="Cancel Order" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="BOTTOM" />
+                  <Button fx:id="simpleOrderDoneBtn" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#clickedDone" prefHeight="30.0" prefWidth="120.0" text="Done" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="8" GridPane.valignment="BOTTOM">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="continueBtn" />
+                     </styleClass></Button>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" style="-fx-background-color: transparent;" styleClass="backGround" GridPane.columnIndex="4" GridPane.columnSpan="2147483647" GridPane.rowSpan="2147483647">
+                     <content>
+                        <Text fx:id="simpleOrderOrderSumerryTxt" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Summery " underline="false">
+                           <styleClass>
+                              <String fx:value="txt" />
+                              <String fx:value="backGround" />
+                           </styleClass></Text>
+                     </content>
+                  </ScrollPane>
+                  <Label fx:id="simpleOrderIllegalQuantityLabel" styleClass="error" text="value is not valid for item type" textFill="#e10606" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                  <Label fx:id="simpleOrderDateErrorLable" layoutX="153.0" layoutY="40.0" styleClass="error" text="please choose legal date" textFill="#e10606" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Label styleClass="txt" text="Delivery cost:" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label id="deliveryCost" fx:id="simpleOrderDeliveryCostLabel" styleClass="txt" text="insetr here" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <ImageView fx:id="cartIcon" fitHeight="70.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" styleClass="backGround" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="7">
+                     <image>
+                        <Image url="@cartIcon.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="bagIcon" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" visible="false" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+                     <image>
+                        <Image url="@bagIcon.jpg" />
+                     </image>
+                  </ImageView>
+                  <CheckBox fx:id="disableAnimation" mnemonicParsing="false" styleClass="txt" text="disable animation" GridPane.columnIndex="1" GridPane.rowIndex="8" GridPane.valignment="TOP" />
+               </children>
+            </GridPane>
+         </center>
+      </BorderPane>
+   </content>
+   <styleClass>
+      <String fx:value="scrollPane" />
+      <String fx:value="backGround" />
+   </styleClass>
+</ScrollPane>

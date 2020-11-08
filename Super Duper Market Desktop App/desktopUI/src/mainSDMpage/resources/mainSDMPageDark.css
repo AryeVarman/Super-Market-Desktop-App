@@ -1,0 +1,84 @@
+.backGround {
+    -fx-background-color: #000000;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.txt {
+    -fx-font-style: oblique;
+    -fx-font-family: "Arial";
+    -fx-fill: yellow;
+    -fx-text-fill: yellow;
+}
+
+.btn {
+    -fx-background-color:
+            linear-gradient(#ffd65b, #e68400),
+            linear-gradient(#ffef84, #f2ba44),
+            linear-gradient(#ffea6a, #efaa22),
+            linear-gradient(#ffe657 0%, #f8c202 50%, #eea10b 100%),
+            linear-gradient(from 0% 0% to 15% 50%, rgba(255,255,255,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,2,3,0;
+    -fx-text-fill: #654b00;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 0 0;
+}
+
+.continueBtn {
+    -fx-font-weight: bold;
+}
+
+.title {
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+    -fx-fill: yellow;
+    -fx-text-fill: yellow;
+}
+
+.error {
+    -fx-font-style: oblique;
+    -fx-font-family: "Arial";
+    -fx-fill: yellow;
+    -fx-text-fill: yellow;
+}
+
+.textField {
+    -fx-font-style: oblique;
+    -fx-font-family: "Arial";
+    -fx-fill: black;
+    -fx-text-fill: black;
+}
+
+.chooser {
+    -fx-font-style: oblique;
+    -fx-font-family: "Arial";
+    -fx-fill: black;
+    -fx-text-fill: black;
+}
+
+.subTitle {
+    -fx-font-size: 18;
+    -fx-fill: yellow;
+    -fx-text-fill: yellow;
+}
+
+.mainTitle {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-fill: yellow;
+    -fx-text-fill: yellow;
+    -fx-underline: true;
+}
+
+#mainPageTitleText {
+    -fx-font-weight: bold;
+    -fx-underline: true;
+    -fx-font-size: 30;
+}

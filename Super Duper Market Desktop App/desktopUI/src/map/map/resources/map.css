@@ -1,0 +1,4 @@
+#mapGrid {
+    -fx-background-image: url("mapPicture.png");
+    -fx-background-size: 100% 100%;
+}
